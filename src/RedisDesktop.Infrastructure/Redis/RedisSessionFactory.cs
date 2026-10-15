@@ -263,7 +263,7 @@ public sealed class RedisSessionFactory : IRedisSessionFactory
             DefaultDatabase = database,
             User = string.IsNullOrWhiteSpace(config.Username) ? null : config.Username,
             Password = string.IsNullOrEmpty(secrets.RedisPassword) ? null : secrets.RedisPassword,
-            ClientName = string.IsNullOrWhiteSpace(config.Name) ? "Redis Me" : config.Name
+            ClientName = string.IsNullOrWhiteSpace(config.Name) ? "RedisMe" : config.Name
         };
 
         if (config.Kind == RedisDeploymentKind.Sentinel)

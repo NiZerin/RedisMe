@@ -5,7 +5,7 @@ namespace RedisDesktop.App;
 
 internal static class AppAssets
 {
-    public const string LogoIcoUri = "avares://RedisDesktop/Assets/logo.ico";
+    public const string LogoIcoUri = "avares://RedisMe/Assets/logo.ico";
 
     private static WindowIcon? _windowIcon;
 

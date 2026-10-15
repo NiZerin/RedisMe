@@ -6,6 +6,8 @@ namespace RedisDesktop.Infrastructure.Tests;
 public class AppUpdateApplierTests
 {
     [Theory]
+    [InlineData("RedisMe.exe", true)]
+    [InlineData("RedisMe-win-x64.exe", true)]
     [InlineData("RedisDesktop.exe", true)]
     [InlineData("RedisDesktop-win-x64.exe", true)]
     [InlineData("RedisDesktop-linux-x64.exe", true)]

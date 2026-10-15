@@ -1,7 +1,7 @@
-# Redis Me
+# RedisMe
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="Redis Me" width="128" height="128">
+  <img src="screenshots/logo.png" alt="RedisMe" width="128" height="128">
 </p>
 
 [English](README.md) | **简体中文**
@@ -24,7 +24,7 @@
 
 ## 下载
 
-到 [Releases](https://github.com/NiZerin/RedisMe/releases/latest) 下载 Redis Me 的 `RedisDesktop-win-x64.zip`，解压后运行 `RedisDesktop.exe`。
+到 [Releases](https://github.com/NiZerin/RedisMe/releases/latest) 下载 RedisMe 的 `RedisMe-win-x64.zip`，解压后运行 `RedisMe.exe`。
 
 - Windows 64 位自包含单文件，**不用安装 .NET**
 - 首次启动可能稍慢（会解出 Skia 等原生库）
@@ -96,7 +96,7 @@ dotnet test
 dotnet publish src/RedisDesktop.App/RedisDesktop.App.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true -p:DebugType=None -p:DebugSymbols=false -p:CopyOutputSymbolsToPublishDirectory=false -o artifacts/win-x64
 ```
 
-产物：`artifacts/win-x64/RedisDesktop.exe`。不要加 `PublishTrimmed` 或 `PublishAot`。其他平台把 `-r win-x64` 换成 `win-arm64`、`osx-arm64`、`osx-x64`、`linux-x64`。
+产物：`artifacts/win-x64/RedisMe.exe`。不要加 `PublishTrimmed` 或 `PublishAot`。其他平台把 `-r win-x64` 换成 `win-arm64`、`osx-arm64`、`osx-x64`、`linux-x64`。
 
 ## 致谢与许可
 

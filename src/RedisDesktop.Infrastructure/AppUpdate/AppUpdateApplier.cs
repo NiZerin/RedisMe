@@ -8,7 +8,7 @@ public static class AppUpdateApplier
     private static int _replacerStarted;
 
     public static string PublishedHostFileName
-        => OperatingSystem.IsWindows() ? "RedisDesktop.exe" : "RedisDesktop";
+        => OperatingSystem.IsWindows() ? "RedisMe.exe" : "RedisMe";
 
     public static bool CanReplaceRunningApp
         => !IsDevelopmentHost() && File.Exists(ResolveTargetExecutable());
@@ -236,9 +236,12 @@ public static class AppUpdateApplier
         }
 
         var stem = Path.GetFileNameWithoutExtension(name);
-        return string.Equals(stem, "RedisDesktop", StringComparison.OrdinalIgnoreCase)
-               || stem.StartsWith("RedisDesktop-", StringComparison.OrdinalIgnoreCase);
+        return IsPublishedHostStem(stem, "RedisMe") || IsPublishedHostStem(stem, "RedisDesktop");
     }
+
+    private static bool IsPublishedHostStem(string stem, string product)
+        => string.Equals(stem, product, StringComparison.OrdinalIgnoreCase)
+           || stem.StartsWith(product + "-", StringComparison.OrdinalIgnoreCase);
 
     public static bool ShouldOverwriteInstallCopy(
         string currentPath,
@@ -310,8 +313,8 @@ public static class AppUpdateApplier
         try
         {
             files = OperatingSystem.IsWindows()
-                ? Directory.GetFiles(directory, "RedisDesktop*.exe")
-                : Directory.GetFiles(directory, "RedisDesktop*");
+                ? Directory.GetFiles(directory, "RedisMe*.exe").Concat(Directory.GetFiles(directory, "RedisDesktop*.exe")).ToArray()
+                : Directory.GetFiles(directory, "RedisMe*").Concat(Directory.GetFiles(directory, "RedisDesktop*")).ToArray();
         }
         catch
         {

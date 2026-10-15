@@ -16,7 +16,7 @@ public class AppReleaseParserTests
               "size": 10
             },
             {
-              "name": "RedisDesktop-win-x64.zip",
+              "name": "RedisMe-win-x64.zip",
               "browser_download_url": "https://example.com/win.zip",
               "size": 42
             }
@@ -40,7 +40,7 @@ public class AppReleaseParserTests
         Assert.NotNull(release);
         Assert.Equal("1.2.3", release!.Version);
         Assert.Equal("v1.2.3", release.TagName);
-        Assert.Equal("RedisDesktop-win-x64.zip", release.Asset.Name);
+        Assert.Equal("RedisMe-win-x64.zip", release.Asset.Name);
         Assert.Equal("https://example.com/win.zip", release.Asset.DownloadUrl);
         Assert.Equal(42, release.Asset.Size);
         Assert.Equal("bug fixes", release.Notes);
@@ -65,5 +65,5 @@ public class AppReleaseParserTests
 
     [Fact]
     public void PreferredAssetName_matches_publish_layout()
-        => Assert.Equal("RedisDesktop-win-x64.zip", AppReleaseParser.PreferredAssetName("win-x64"));
+        => Assert.Equal("RedisMe-win-x64.zip", AppReleaseParser.PreferredAssetName("win-x64"));
 }

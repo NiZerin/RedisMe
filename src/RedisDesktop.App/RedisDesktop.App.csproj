@@ -8,13 +8,13 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RootNamespace>RedisDesktop.App</RootNamespace>
-    <AssemblyName>RedisDesktop</AssemblyName>
-    <Product>Redis Me</Product>
-    <AssemblyTitle>Redis Me</AssemblyTitle>
-    <Description>Redis Me</Description>
-    <ApplicationTitle>Redis Me</ApplicationTitle>
+    <AssemblyName>RedisMe</AssemblyName>
+    <Product>RedisMe</Product>
+    <AssemblyTitle>RedisMe</AssemblyTitle>
+    <Description>RedisMe</Description>
+    <ApplicationTitle>RedisMe</ApplicationTitle>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
-    <Version>1.0.9</Version>
+    <Version>1.0.10</Version>
   </PropertyGroup>
 
   <ItemGroup>

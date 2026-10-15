@@ -1,7 +1,7 @@
-# Redis Me
+# RedisMe
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="Redis Me" width="128" height="128">
+  <img src="screenshots/logo.png" alt="RedisMe" width="128" height="128">
 </p>
 
 **English** | [简体中文](README-CN.md)
@@ -24,7 +24,7 @@ A native Redis desktop client built with [Avalonia](https://avaloniaui.net/) and
 
 ## Download
 
-Get the Redis Me package `RedisDesktop-win-x64.zip` from [Releases](https://github.com/NiZerin/RedisMe/releases/latest), extract it, and run `RedisDesktop.exe`.
+Get the RedisMe package `RedisMe-win-x64.zip` from [Releases](https://github.com/NiZerin/RedisMe/releases/latest), extract it, and run `RedisMe.exe`.
 
 - Self-contained Windows x64 single-file build — **no .NET install required**
 - First launch may be slower while native libraries such as Skia are extracted
@@ -96,7 +96,7 @@ Integration tests skip instead of failing when Redis is unreachable. Override th
 dotnet publish src/RedisDesktop.App/RedisDesktop.App.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true -p:DebugType=None -p:DebugSymbols=false -p:CopyOutputSymbolsToPublishDirectory=false -o artifacts/win-x64
 ```
 
-Output: `artifacts/win-x64/RedisDesktop.exe`. Do not add `PublishTrimmed` or `PublishAot`. For other platforms, replace `-r win-x64` with `win-arm64`, `osx-arm64`, `osx-x64`, or `linux-x64`.
+Output: `artifacts/win-x64/RedisMe.exe`. Do not add `PublishTrimmed` or `PublishAot`. For other platforms, replace `-r win-x64` with `win-arm64`, `osx-arm64`, `osx-x64`, or `linux-x64`.
 
 ## Credits and license
 

@@ -50,7 +50,7 @@ public static class AppReleaseParser
     }
 
     public static string PreferredAssetName(string? runtimeIdentifier = null)
-        => $"RedisDesktop-{runtimeIdentifier ?? CurrentRuntimeIdentifier()}.zip";
+        => $"RedisMe-{runtimeIdentifier ?? CurrentRuntimeIdentifier()}.zip";
 
     public static string GetLocalVersion()
     {
@@ -154,7 +154,8 @@ public static class AppReleaseParser
             }
 
             if (!name.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)
-                || !name.Contains("RedisDesktop", StringComparison.OrdinalIgnoreCase))
+                || (!name.Contains("RedisMe", StringComparison.OrdinalIgnoreCase)
+                    && !name.Contains("RedisDesktop", StringComparison.OrdinalIgnoreCase)))
             {
                 continue;
             }
