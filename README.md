@@ -11,7 +11,7 @@ A native Redis desktop client built with [Avalonia](https://avaloniaui.net/) and
 [![Release](https://img.shields.io/github/v/release/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/releases)
 [![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisMe/total)](https://github.com/NiZerin/RedisMe/releases)
 [![Stars](https://img.shields.io/github/stars/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/stargazers)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
+![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
 ![Platform](https://img.shields.io/badge/Windows-x64-0078D4)
 
 ## Screenshots
@@ -76,7 +76,7 @@ No dedicated RedisJSON / TimeSeries / Vector editors, custom script viewers, or 
 
 ## Build from source
 
-Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
+Requires the [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0).
 
 ```bash
 git clone https://github.com/NiZerin/RedisMe.git

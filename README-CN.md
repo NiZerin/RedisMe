@@ -11,7 +11,7 @@
 [![Release](https://img.shields.io/github/v/release/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/releases)
 [![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisMe/total)](https://github.com/NiZerin/RedisMe/releases)
 [![Stars](https://img.shields.io/github/stars/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/stargazers)
-![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
+![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
 ![Platform](https://img.shields.io/badge/Windows-x64-0078D4)
 
 ## 截图
@@ -76,7 +76,7 @@ RedisJSON / TimeSeries / Vector 专用编辑器、自定义脚本 Viewer、DUMP 
 
 ## 从源码构建
 
-需要 [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)。
+需要 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)。
 
 ```bash
 git clone https://github.com/NiZerin/RedisMe.git
