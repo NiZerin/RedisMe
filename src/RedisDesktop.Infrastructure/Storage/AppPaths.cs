@@ -4,15 +4,36 @@ namespace RedisDesktop.Infrastructure;
 
 public static class AppPaths
 {
+    public const string FolderName = "RedisMe";
+    public const string LegacyFolderName = "RedisDesktopForAtomUI";
+
     public static string Root
     {
         get
         {
-            var dir = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "RedisDesktopForAtomUI");
-            Directory.CreateDirectory(dir);
-            return dir;
+            var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var current = Path.Combine(appData, FolderName);
+            var legacy = Path.Combine(appData, LegacyFolderName);
+            if (!Directory.Exists(current) && Directory.Exists(legacy))
+            {
+                try
+                {
+                    Directory.Move(legacy, current);
+                }
+                catch (IOException)
+                {
+                    Directory.CreateDirectory(legacy);
+                    return legacy;
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    Directory.CreateDirectory(legacy);
+                    return legacy;
+                }
+            }
+
+            Directory.CreateDirectory(current);
+            return current;
         }
     }
 

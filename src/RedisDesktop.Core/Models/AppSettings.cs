@@ -35,7 +35,7 @@ public sealed class AppSettings
     public string? PendingUpdatePackagePath { get; set; }
 
     /// <summary>
-    /// The executable the user actually launched. The updater must overwrite this path,
+    /// The executable the user actually launched. Redis Me must overwrite this path,
     /// not only <c>RedisDesktop.exe</c>, so a downloaded <c>RedisDesktop-win-x64.exe</c> stays current.
     /// </summary>
     public string? PendingUpdateTargetExe { get; set; }

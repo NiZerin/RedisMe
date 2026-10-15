@@ -24,10 +24,10 @@ public enum AppUpdatePromptResult
 public static class AppReleaseParser
 {
     public const string GitHubOwner = "NiZerin";
-    public const string GitHubRepo = "RedisDesktopForAtomUI";
-    public const string GitHubUrl = "https://github.com/NiZerin/RedisDesktopForAtomUI";
+    public const string GitHubRepo = "RedisMe";
+    public const string GitHubUrl = "https://github.com/NiZerin/RedisMe";
     public const string LatestReleaseApiUrl =
-        "https://api.github.com/repos/NiZerin/RedisDesktopForAtomUI/releases/latest";
+        "https://api.github.com/repos/NiZerin/RedisMe/releases/latest";
 
     public static string CurrentRuntimeIdentifier()
     {

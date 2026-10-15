@@ -1,16 +1,16 @@
-# Redis Desktop for AtomUI
+# Redis Me
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="Redis Desktop" width="128" height="128">
+  <img src="screenshots/logo.png" alt="Redis Me" width="128" height="128">
 </p>
 
 [English](README.md) | **简体中文**
 
 原生 Redis 桌面客户端，用 [Avalonia](https://avaloniaui.net/) + [AtomUI](https://github.com/AtomUI/AtomUI) 构建，界面结构对标 [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager)：左侧连接手风琴里浏览 Key，右侧 Tab 打开 Status、详情和 CLI。不是 Electron。
 
-[![Release](https://img.shields.io/github/v/release/NiZerin/RedisDesktopForAtomUI)](https://github.com/NiZerin/RedisDesktopForAtomUI/releases)
-[![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisDesktopForAtomUI/total)](https://github.com/NiZerin/RedisDesktopForAtomUI/releases)
-[![Stars](https://img.shields.io/github/stars/NiZerin/RedisDesktopForAtomUI)](https://github.com/NiZerin/RedisDesktopForAtomUI/stargazers)
+[![Release](https://img.shields.io/github/v/release/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/releases)
+[![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisMe/total)](https://github.com/NiZerin/RedisMe/releases)
+[![Stars](https://img.shields.io/github/stars/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/stargazers)
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Platform](https://img.shields.io/badge/Windows-x64-0078D4)
 
@@ -24,7 +24,7 @@
 
 ## 下载
 
-到 [Releases](https://github.com/NiZerin/RedisDesktopForAtomUI/releases/latest) 下载 `RedisDesktop-win-x64.zip`，解压后运行 `RedisDesktop.exe`。
+到 [Releases](https://github.com/NiZerin/RedisMe/releases/latest) 下载 Redis Me 的 `RedisDesktop-win-x64.zip`，解压后运行 `RedisDesktop.exe`。
 
 - Windows 64 位自包含单文件，**不用安装 .NET**
 - 首次启动可能稍慢（会解出 Skia 等原生库）
@@ -61,7 +61,7 @@ macOS / Linux 可从源码自行 `dotnet publish`（见下方），暂无官方�
 | `Ctrl+L` | CLI 清屏 |
 | `Ctrl` + 单击 Key | 在新 Tab 打开 |
 
-配置目录：`%AppData%\RedisDesktopForAtomUI\`。密码和 SSH 口令用 Windows DPAPI 加密，不会明文写入 `connections.json`。导出的密文只在同一 Windows 用户下可解密。
+配置目录：`%AppData%\RedisMe\`。若已有 `%AppData%\RedisDesktopForAtomUI\`，首次启动会把它挪到新目录。密码和 SSH 口令用 Windows DPAPI 加密，不会明文写入 `connections.json`。导出的密文只在同一 Windows 用户下可解密。
 
 ## 连接注意
 
@@ -79,8 +79,8 @@ RedisJSON / TimeSeries / Vector 专用编辑器、自定义脚本 Viewer、DUMP 
 需要 [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)。
 
 ```bash
-git clone https://github.com/NiZerin/RedisDesktopForAtomUI.git
-cd RedisDesktopForAtomUI
+git clone https://github.com/NiZerin/RedisMe.git
+cd RedisMe
 dotnet run --project src/RedisDesktop.App
 ```
 

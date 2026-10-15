@@ -9,10 +9,12 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RootNamespace>RedisDesktop.App</RootNamespace>
     <AssemblyName>RedisDesktop</AssemblyName>
-    <Product>Redis Desktop</Product>
-    <ApplicationTitle>Redis Desktop</ApplicationTitle>
+    <Product>Redis Me</Product>
+    <AssemblyTitle>Redis Me</AssemblyTitle>
+    <Description>Redis Me</Description>
+    <ApplicationTitle>Redis Me</ApplicationTitle>
     <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
-    <Version>1.0.8</Version>
+    <Version>1.0.9</Version>
   </PropertyGroup>
 
   <ItemGroup>

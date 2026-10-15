@@ -1,16 +1,16 @@
-# Redis Desktop for AtomUI
+# Redis Me
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="Redis Desktop" width="128" height="128">
+  <img src="screenshots/logo.png" alt="Redis Me" width="128" height="128">
 </p>
 
 **English** | [简体中文](README-CN.md)
 
 A native Redis desktop client built with [Avalonia](https://avaloniaui.net/) and [AtomUI](https://github.com/AtomUI/AtomUI). The layout follows [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager): browse keys in a left-side connection accordion, and open Status, key details, and CLI in tabs on the right. Not Electron.
 
-[![Release](https://img.shields.io/github/v/release/NiZerin/RedisDesktopForAtomUI)](https://github.com/NiZerin/RedisDesktopForAtomUI/releases)
-[![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisDesktopForAtomUI/total)](https://github.com/NiZerin/RedisDesktopForAtomUI/releases)
-[![Stars](https://img.shields.io/github/stars/NiZerin/RedisDesktopForAtomUI)](https://github.com/NiZerin/RedisDesktopForAtomUI/stargazers)
+[![Release](https://img.shields.io/github/v/release/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/releases)
+[![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisMe/total)](https://github.com/NiZerin/RedisMe/releases)
+[![Stars](https://img.shields.io/github/stars/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/stargazers)
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)
 ![Platform](https://img.shields.io/badge/Windows-x64-0078D4)
 
@@ -24,7 +24,7 @@ A native Redis desktop client built with [Avalonia](https://avaloniaui.net/) and
 
 ## Download
 
-Get `RedisDesktop-win-x64.zip` from [Releases](https://github.com/NiZerin/RedisDesktopForAtomUI/releases/latest), extract it, and run `RedisDesktop.exe`.
+Get the Redis Me package `RedisDesktop-win-x64.zip` from [Releases](https://github.com/NiZerin/RedisMe/releases/latest), extract it, and run `RedisDesktop.exe`.
 
 - Self-contained Windows x64 single-file build — **no .NET install required**
 - First launch may be slower while native libraries such as Skia are extracted
@@ -61,7 +61,7 @@ macOS and Linux can be published from source with `dotnet publish` (see below). 
 | `Ctrl+L` | Clear CLI |
 | `Ctrl` + click a key | Open in a new tab |
 
-Settings live in `%AppData%\RedisDesktopForAtomUI\`. Passwords and SSH passphrases are encrypted with Windows DPAPI and are not stored as plaintext in `connections.json`. Exported secrets can only be decrypted by the same Windows user.
+Settings live in `%AppData%\RedisMe\`. An existing `%AppData%\RedisDesktopForAtomUI\` folder is moved there on first launch. Passwords and SSH passphrases are encrypted with Windows DPAPI and are not stored as plaintext in `connections.json`. Exported secrets can only be decrypted by the same Windows user.
 
 ## Connection notes
 
@@ -79,8 +79,8 @@ No dedicated RedisJSON / TimeSeries / Vector editors, custom script viewers, or 
 Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ```bash
-git clone https://github.com/NiZerin/RedisDesktopForAtomUI.git
-cd RedisDesktopForAtomUI
+git clone https://github.com/NiZerin/RedisMe.git
+cd RedisMe
 dotnet run --project src/RedisDesktop.App
 ```
 

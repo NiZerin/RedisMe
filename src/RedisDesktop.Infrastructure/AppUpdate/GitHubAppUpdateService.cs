@@ -166,7 +166,7 @@ public sealed class GitHubAppUpdateService : IAppUpdateService
         {
             Timeout = TimeSpan.FromMinutes(10)
         };
-        client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("RedisDesktop", AppReleaseParser.GetLocalVersion()));
+        client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("RedisMe", AppReleaseParser.GetLocalVersion()));
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github+json"));
         return client;
     }
