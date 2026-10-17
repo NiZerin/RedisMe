@@ -7,7 +7,7 @@ public class AppReleaseParserTests
     private const string Sample = """
         {
           "tag_name": "v1.2.3",
-          "html_url": "https://github.com/NiZerin/RedisMe/releases/tag/v1.2.3",
+          "html_url": "https://github.com/AtomUICommunity/RedisMe/releases/tag/v1.2.3",
           "body": "bug fixes",
           "assets": [
             {

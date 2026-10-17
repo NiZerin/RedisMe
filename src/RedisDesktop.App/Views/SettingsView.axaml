@@ -127,40 +127,68 @@
                 </UniformGrid>
             </atom:Card>
 
-            <atom:Card SizeType="Small">
-                <StackPanel Spacing="12">
-                    <StackPanel Orientation="Horizontal" Spacing="12">
-                        <Image Width="56"
-                               Height="56"
-                               Stretch="Uniform"
-                               Source="/Assets/logo.png"
-                               RenderOptions.BitmapInterpolationMode="HighQuality" />
-                        <StackPanel VerticalAlignment="Center" Spacing="4">
-                            <atom:TextBlock FontSize="16"
-                                            FontWeight="SemiBold"
-                                            Text="{Binding Loc.AppName}" />
-                            <StackPanel Orientation="Horizontal" Spacing="8">
-                                <atom:TextBlock Opacity="0.75"
-                                                VerticalAlignment="Center"
-                                                Text="{Binding Loc.PreVersion}" />
-                                <atom:Tag Text="{Binding AppVersion}" TagColor="info" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="8">
-                                <atom:TextBlock Opacity="0.75"
-                                                VerticalAlignment="Center"
-                                                Text="{Binding Loc.LatestVersion}" />
-                                <atom:Tag Text="{Binding LatestVersionText}"
-                                          TagColor="success"
-                                          IsVisible="{Binding HasNewerVersion}" />
-                                <atom:TextBlock VerticalAlignment="Center"
-                                                Text="{Binding LatestVersionText}"
-                                                IsVisible="{Binding !HasNewerVersion}" />
-                            </StackPanel>
+            <atom:Card Header="{Binding Loc.AppInfo}" SizeType="Small">
+                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="16">
+                    <Image Width="48"
+                           Height="48"
+                           VerticalAlignment="Center"
+                           Stretch="Uniform"
+                           Source="/Assets/logo.png"
+                           RenderOptions.BitmapInterpolationMode="HighQuality" />
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="10">
+                        <atom:TextBlock FontSize="16"
+                                        FontWeight="SemiBold"
+                                        Text="{Binding Loc.AppName}" />
+                        <StackPanel Orientation="Horizontal" Spacing="16">
+                            <atom:HyperLinkButton Content="{Binding Loc.Hotkey}"
+                                                  Command="{Binding ShowHotkeysCommand}" />
+                            <atom:HyperLinkButton Content="{Binding Loc.ClearCache}"
+                                                  Command="{Binding ClearCacheCommand}" />
+                            <atom:HyperLinkButton Content="{Binding Loc.OpenConfigFolder}"
+                                                  Command="{Binding OpenConfigFolderCommand}" />
+                            <atom:HyperLinkButton Content="{Binding Loc.GitHub}"
+                                                  ToolTip.Tip="{Binding GitHubUrl}"
+                                                  Command="{Binding OpenGitHubCommand}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </atom:Card>
+
+            <atom:Card Header="{Binding Loc.Updates}" SizeType="Small">
+                <StackPanel Spacing="14">
+                    <Grid ColumnDefinitions="Auto,*"
+                          RowDefinitions="Auto,Auto"
+                          ColumnSpacing="16"
+                          RowSpacing="8">
+                        <atom:TextBlock Opacity="0.75"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Loc.PreVersion}" />
+                        <atom:Tag Grid.Column="1"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Center"
+                                  Text="{Binding AppVersion}"
+                                  TagColor="info" />
+                        <atom:TextBlock Grid.Row="1"
+                                        Opacity="0.75"
+                                        VerticalAlignment="Center"
+                                        Text="{Binding Loc.LatestVersion}" />
+                        <StackPanel Grid.Row="1"
+                                    Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    Spacing="12"
+                                    VerticalAlignment="Center">
+                            <atom:Tag Text="{Binding LatestVersionText}"
+                                      TagColor="success"
+                                      IsVisible="{Binding HasNewerVersion}" />
+                            <atom:TextBlock VerticalAlignment="Center"
+                                            Text="{Binding LatestVersionText}"
+                                            IsVisible="{Binding !HasNewerVersion}" />
                             <atom:TextBlock Opacity="0.75"
+                                            VerticalAlignment="Center"
                                             TextWrapping="Wrap"
                                             Text="{Binding UpdateStatusText}" />
                         </StackPanel>
-                    </StackPanel>
+                    </Grid>
                     <StackPanel Orientation="Horizontal" Spacing="8">
                         <atom:ToggleSwitch IsChecked="{Binding CheckUpdatesOnStartup}"
                                            VerticalAlignment="Center" />
@@ -178,17 +206,17 @@
                                      IsEnabled="{Binding !IsCheckingUpdate}"
                                      Command="{Binding RefreshLatestCommand}" />
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Spacing="16">
-                        <atom:HyperLinkButton Content="{Binding Loc.Hotkey}"
-                                              Command="{Binding ShowHotkeysCommand}" />
-                        <atom:HyperLinkButton Content="{Binding Loc.ClearCache}"
-                                              Command="{Binding ClearCacheCommand}" />
-                        <atom:HyperLinkButton Content="{Binding Loc.OpenConfigFolder}"
-                                              Command="{Binding OpenConfigFolderCommand}" />
-                        <atom:HyperLinkButton Content="{Binding Loc.GitHub}"
-                                              ToolTip.Tip="{Binding GitHubUrl}"
-                                              Command="{Binding OpenGitHubCommand}" />
-                    </StackPanel>
+                </StackPanel>
+            </atom:Card>
+
+            <atom:Card Header="{Binding Loc.Author}" SizeType="Small">
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <atom:TextBlock FontWeight="SemiBold"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding AuthorName}" />
+                    <atom:HyperLinkButton Content="{Binding AuthorUrl}"
+                                          VerticalAlignment="Center"
+                                          Command="{Binding OpenAuthorCommand}" />
                 </StackPanel>
             </atom:Card>
         </StackPanel>

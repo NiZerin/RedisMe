@@ -8,9 +8,9 @@
 
 原生 Redis 桌面客户端，用 [Avalonia](https://avaloniaui.net/) + [AtomUI](https://github.com/AtomUI/AtomUI) 构建，界面结构对标 [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager)：左侧连接手风琴里浏览 Key，右侧 Tab 打开 Status、详情和 CLI。不是 Electron。
 
-[![Release](https://img.shields.io/github/v/release/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/releases)
-[![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisMe/total)](https://github.com/NiZerin/RedisMe/releases)
-[![Stars](https://img.shields.io/github/stars/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/stargazers)
+[![Release](https://img.shields.io/github/v/release/AtomUICommunity/RedisMe)](https://github.com/AtomUICommunity/RedisMe/releases)
+[![Downloads](https://img.shields.io/github/downloads/AtomUICommunity/RedisMe/total)](https://github.com/AtomUICommunity/RedisMe/releases)
+[![Stars](https://img.shields.io/github/stars/AtomUICommunity/RedisMe)](https://github.com/AtomUICommunity/RedisMe/stargazers)
 ![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
 ![Platform](https://img.shields.io/badge/Windows-x64-0078D4)
 
@@ -24,7 +24,7 @@
 
 ## 下载
 
-到 [Releases](https://github.com/NiZerin/RedisMe/releases/latest) 下载 RedisMe 的 `RedisMe-win-x64.zip`，解压后运行 `RedisMe.exe`。
+到 [Releases](https://github.com/AtomUICommunity/RedisMe/releases/latest) 下载 RedisMe 的 `RedisMe-win-x64.zip`，解压后运行 `RedisMe.exe`。
 
 - Windows 64 位自包含单文件，**不用安装 .NET**
 - 首次启动可能稍慢（会解出 Skia 等原生库）
@@ -79,7 +79,7 @@ RedisJSON / TimeSeries / Vector 专用编辑器、自定义脚本 Viewer、DUMP 
 需要 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)。
 
 ```bash
-git clone https://github.com/NiZerin/RedisMe.git
+git clone https://github.com/AtomUICommunity/RedisMe.git
 cd RedisMe
 dotnet run --project src/RedisDesktop.App
 ```

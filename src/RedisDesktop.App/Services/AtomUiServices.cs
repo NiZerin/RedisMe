@@ -476,8 +476,8 @@ public sealed class AtomUiUserPrompt : IUserPrompt
             Title = loc.Settings,
             Width = 780,
             MinWidth = 640,
-            Height = 560,
-            MinHeight = 420,
+            Height = 720,
+            MinHeight = 480,
             WindowStartupLocation = WindowStartupLocation.CenterOwner,
             CanResize = true
         };

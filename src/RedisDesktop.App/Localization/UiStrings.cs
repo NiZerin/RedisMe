@@ -164,6 +164,9 @@ public sealed class UiStrings : INotifyPropertyChanged
     public string KeysPerLoadingTip => Get("keys_per_loading_tip", "每次 SCAN 加载的 Key 数量，设置过大可能会影响性能。", "Keys loaded per SCAN. Setting this too large may affect performance.");
     public string ConfigConnections => Get("config_connections", "连接配置", "Connections");
     public string AppName => "RedisMe";
+    public string AppInfo => Get("app_info", "软件信息", "About");
+    public string Updates => Get("updates", "更新", "Updates");
+    public string Author => Get("author", "作者", "Author");
     public string PreVersion => Get("pre_version", "当前版本", "Current Version");
     public string LatestVersion => Get("latest_version", "最新版本", "Latest Version");
     public string CheckUpdate => Get("check_update", "检查更新", "Check for updates");

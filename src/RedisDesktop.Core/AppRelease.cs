@@ -23,11 +23,13 @@ public enum AppUpdatePromptResult
 
 public static class AppReleaseParser
 {
-    public const string GitHubOwner = "NiZerin";
+    public const string GitHubOwner = "AtomUICommunity";
     public const string GitHubRepo = "RedisMe";
-    public const string GitHubUrl = "https://github.com/NiZerin/RedisMe";
+    public const string GitHubUrl = "https://github.com/AtomUICommunity/RedisMe";
+    public const string AuthorName = "NiZerin";
+    public const string AuthorUrl = "https://github.com/NiZerin";
     public const string LatestReleaseApiUrl =
-        "https://api.github.com/repos/NiZerin/RedisMe/releases/latest";
+        "https://api.github.com/repos/AtomUICommunity/RedisMe/releases/latest";
 
     public static string CurrentRuntimeIdentifier()
     {

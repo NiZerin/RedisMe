@@ -52,6 +52,10 @@ public partial class SettingsViewModel : ViewModelBase
 
     public string GitHubUrl { get; } = AppReleaseParser.GitHubUrl;
 
+    public string AuthorName { get; } = AppReleaseParser.AuthorName;
+
+    public string AuthorUrl { get; } = AppReleaseParser.AuthorUrl;
+
     public IReadOnlyList<SettingChoice> ThemeOptions { get; }
 
     public IReadOnlyList<SettingChoice> LanguageOptions { get; }
@@ -202,6 +206,9 @@ public partial class SettingsViewModel : ViewModelBase
 
     [RelayCommand]
     private void OpenGitHub() => OpenPath(GitHubUrl);
+
+    [RelayCommand]
+    private void OpenAuthor() => OpenPath(AuthorUrl);
 
     [RelayCommand]
     private Task RefreshLatestAsync() => CheckLatestAsync();

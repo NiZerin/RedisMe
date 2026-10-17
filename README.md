@@ -8,9 +8,9 @@
 
 A native Redis desktop client built with [Avalonia](https://avaloniaui.net/) and [AtomUI](https://github.com/AtomUI/AtomUI). The layout follows [Another Redis Desktop Manager](https://github.com/qishibo/AnotherRedisDesktopManager): browse keys in a left-side connection accordion, and open Status, key details, and CLI in tabs on the right. Not Electron.
 
-[![Release](https://img.shields.io/github/v/release/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/releases)
-[![Downloads](https://img.shields.io/github/downloads/NiZerin/RedisMe/total)](https://github.com/NiZerin/RedisMe/releases)
-[![Stars](https://img.shields.io/github/stars/NiZerin/RedisMe)](https://github.com/NiZerin/RedisMe/stargazers)
+[![Release](https://img.shields.io/github/v/release/AtomUICommunity/RedisMe)](https://github.com/AtomUICommunity/RedisMe/releases)
+[![Downloads](https://img.shields.io/github/downloads/AtomUICommunity/RedisMe/total)](https://github.com/AtomUICommunity/RedisMe/releases)
+[![Stars](https://img.shields.io/github/stars/AtomUICommunity/RedisMe)](https://github.com/AtomUICommunity/RedisMe/stargazers)
 ![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
 ![Platform](https://img.shields.io/badge/Windows-x64-0078D4)
 
@@ -24,7 +24,7 @@ A native Redis desktop client built with [Avalonia](https://avaloniaui.net/) and
 
 ## Download
 
-Get the RedisMe package `RedisMe-win-x64.zip` from [Releases](https://github.com/NiZerin/RedisMe/releases/latest), extract it, and run `RedisMe.exe`.
+Get the RedisMe package `RedisMe-win-x64.zip` from [Releases](https://github.com/AtomUICommunity/RedisMe/releases/latest), extract it, and run `RedisMe.exe`.
 
 - Self-contained Windows x64 single-file build — **no .NET install required**
 - First launch may be slower while native libraries such as Skia are extracted
@@ -79,7 +79,7 @@ No dedicated RedisJSON / TimeSeries / Vector editors, custom script viewers, or 
 Requires the [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0).
 
 ```bash
-git clone https://github.com/NiZerin/RedisMe.git
+git clone https://github.com/AtomUICommunity/RedisMe.git
 cd RedisMe
 dotnet run --project src/RedisDesktop.App
 ```
